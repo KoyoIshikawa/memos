@@ -1,2 +1,12 @@
-<h1>Memos#create</h1>
-
+<h3>Create Memo</h3>
+<%= form_tag("/create") do %>
+    <div class="form-group">
+        <%= label_tag "form-title","Title"%>
+        <%= text_field :memos, :title, id:"form-title", class:"form-control",placeholder:"Title"%>
+    </div>
+    <div class="form-group">
+        <%= label_tag "form-body","Content"%>
+        <%= text_field :memos,:body, id: "form-body",class:"form-control",placeholder:"content"%>
+    </div>
+        <%= submit_tag "edit",class:"btn btn-primary"%>
+<% end %>
