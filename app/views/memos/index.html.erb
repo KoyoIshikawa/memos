@@ -1,0 +1,14 @@
+   
+    <h3>Memo List</h3>
+    <% @memos.each do |name| %>
+        <div class="col-sm-4">
+            <div class="panel panel-warning">
+              <div class="panel-heading"><%= name.title %></div>
+              <div class="panel-body">
+                <%= name.body %>
+              </div>
+            </div>
+        </div>
+    <% end %>
+    
+    
