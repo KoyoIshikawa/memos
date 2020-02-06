@@ -1,4 +1,5 @@
 class MemosController < ApplicationController
+  before_action :logged_in_user, only:[:edit, :update, :destroy]
   def index
     #トップページが呼ばれたときn動作するアクション
     @memos = Memo.all

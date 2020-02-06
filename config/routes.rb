@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root to:"memos#index"
 
   get '/new', to: "memos#new"
@@ -13,4 +15,7 @@ Rails.application.routes.draw do
   
   get "/categories/:id",to:"categories#show"
   
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 end

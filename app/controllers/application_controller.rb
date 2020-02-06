@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
     def get_category 
       @categories=Category.all
     end
+    include SessionsHelper
 end
